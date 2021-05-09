@@ -1,168 +1,196 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/af7a46e1ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Scribbler | Post</title>
 
-<head>
- 
-    <!-- Google Fonts file  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Satisfy|Roboto|Marck+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../style/header.css" />
-    <link rel="stylesheet" type="text/css" href="../style/post.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
-<body style=" background-color: white;">
-    <div class="header">
-        <div class="bg-signin">
-            <button type="button" class="signinbutton" data-toggle="modal" data-target="#exModal"
-                id="sign-in-button">
-                Sign In
-            </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
-            <button type="button" class="signinbutton" data-toggle="modal" data-target="#exModalSignUp"
-                id="sign-up-button">
-                Sign Up
-            </button>
-        </div>
+    <!-- Include css -->
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
 
-        <a id="pageHeading" class="logo-title" a href="../index.html">ScriBBler</a>
-        <p class="smaller-heading">Explore, Imagine, Create</p>
-        
-        <!-- Fade Modal-->
-    
-        <div class="modal fade" id="exModal" tabindex="-1" role="dialog" aria-labelledby="exModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="exModalLabel"
-                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Welcome Back !!</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                   <!--Modal Body-->
-                    <div class="modal-body">
-                        <form>
-                             <!--form grouper username sign in-->
-                            <div class="form-grouper">
-                                <label for="exUsername">Username</label>
-                                <input type="text" placeholder="Enter your username!!!" class="form-control" id="exUsername"
-                                style="background-color :#DCDCDCDC ;"
-                                    aria-describedby="usernamehelpp" 
-                                     required>
-                            </div>
-
-
-
-                             <!--form grouper password signin -->
-                            <div class="form-grouper">
-                                <label for="exPassword1">Password</label>
-                                <input type="password"  placeholder="Enter your Password!!!" class="form-control" id="exPassword1" 
-                                style="background-color :#DCDCDCDC ;"
-                                      required>
-                            </div>
-                            <div class="modal-signin-container">
-                                <button type="submit" class="btn btn-success btn-block">Sign-In</button>
-                            </div>
-                            <div class="  modal-footer border-top-2 d-flex justify-content-center ">
-                                Not a member ? <a data-target="#exModalSignUp" data-dismiss="modal"
-                                    data-toggle="modal" href="#signup-form"> Sign Up</a>
-                            </div>
-                        </form>     
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-  <!-- Modal fade -->
-  <div class="modal fade" id="exModalSignUp" tabindex="-2" role="dialog" aria-labelledby="exModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title" id="exModalLabel"
-                  style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Get Started!</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-            <form>
-
-                <div class="form-grouper">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name!!!"
-                        style="background-color : 	#DCDCDC ;" required>
-
-                </div>
-                <div class="form-grouper">
-                    <label for="exInputUsername1">Username</label>
-                    <input type="text" class="form-control" id="exInputUsername1"
-                        aria-describedby="emailHelpp" placeholder="Enter your username!!!"
-                        style="background-color :#DCDCDC ;" required>
-                </div>
-                <div class="form-grouper">
-                    <label for="exInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exInputPassword1"
-                        placeholder="Enter your password!!!" style="background-color :#DCDCDC ;" required>
-                </div>
-                <div class="form-grouper">
-                    <label for="exInputPassword1">Confirm Password</label>
-                    <input type="password" class="form-control" id="exInputPassword2"
-                        placeholder="Re-enter your Password!!!" style="background-color :#DCDCDC ;" required>
-                </div>
-
-                <div class="modal-signin-container">
-                    <button type="submit" class="btn btn-success btn-block">Sign Up</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-<!--post container Edit option-->
-    <div class="post container">
-        <div class="heading-content" id="edit-heading" contenteditable="true"></div>
-        <div class="author">
-            <div class="author-name"></div>
-            <div>
-                <button id="edit-button" type="button" onclick="onEdit()"  class="btn btn-danger">Edit<i
-                    style="padding-left: 5px;"   class="fa fa-edit" ></i></button>
-            </div>
-        </div>
-
-
-        <div class="post-content" id="edit-contenttext" contenteditable="true">
-        </div>
-<!--post container like option-->
-        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
-                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
-        <div id="showCount">Be the first one to like this</div>
-<!--post container comment-->
-        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
-        <div><button id="comment-button" type="button" class="btn btn-danger"
-                onclick="addComment(comment)">Comment</button></div>
-        <div id="allCommentsHeading">All Comments</div>
-        <div class="comment-container">
-            <div id="comments">
-            </div>
-        </div>
-
-    </div>
-
-
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-        
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-       
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        
 
-    <script src=../scripts/post.js> </script> </body> </html> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+<body class="posts">
+    <!-- code for header  -->
+    <div class="header">
+      <div class="title-container">
+        <p class="title">ScriBBler</p>
+        <p class="sub-title">Explore, Imagine, Create</p>
+      </div>
+      <div class="login-buttons-container">
+        <button onclick="showSignUpModal()" class="blue-button" type="button">
+          Sign Up
+        </button>
+        <button onclick="showSignInModal()" class="blue-button" type="button">
+          Sign In
+        </button>
+      </div>
+    </div>
+    <!-- Insert code for Sign In modal here -->
+      <div class="modal" id="signin-modal">
+        <div class="modal-content">
+          <div class="modal-head">
+            <span>
+              <i
+                onclick="hideSignInModal()"
+                class="fa fa-times"
+                aria-hidden="true"
+              ></i>
+              <h2 class="modal-title">Welcome Back!</h2>
+            </span>
+          </div>
+          <hr />
+          <form>
+            <label for="username" class="label-text">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+            <label for="password" class="label-text">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <button
+              type="submit"
+              onclick="signin(username, password)"
+              class="signin-btn"
+            >
+              Sign In
+            </button>
+          </form>
+          <div class="container">
+            <p class="bottom-banner">
+              Not a member?<span
+                onclick="hideSignInModal();showSignUpModal()"
+                class="signup"
+                >Sign Up</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Insert code for Sign Up modal here -->
+    <div>
+      <div class="modal" id="signup-modal">
+        <div class="modal-content">
+          <div class="modal-head">
+            <span>
+              <i
+                onclick="hideSignUpModal()"
+                class="fa fa-times"
+                aria-hidden="true"
+              ></i>
+              <h2 class="modal-title">Get Started</h2>
+            </span>
+          </div>
+          <hr />
+          <form>
+            <label for="fullname" class="label-text">Name</label>
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter your name"
+              required
+            />
+            <label for="username" class="label-text">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+            <label for="password" class="label-text">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <label for="confirmpassword" class="label-text"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirm_password"
+              placeholder="Re-enter your password"
+              required
+            />
+            <button
+              type="submit"
+              onclick="signup(firstName,lastName, email, password, mobile)"
+              class="signin-btn"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- main section for displaying post title, user name and post -->
+  <main>
+    <input type="text" id="title" name="title" readonly></input>
+    <div class="header">
+      <p class="name" id="name2"></p>
+      <button id="edit" onclick="edit()">Edit&nbsp;<i class="fas fa-edit"></i></button>
+      <button id="save" onclick="save()" style="display: none;">Save&nbsp;<i class="fas fa-save"></i></button>
+    </div>
+    <div class="post">
+      <div id="postContent"></div>
+    </div>
+    <div class="like">
+      <button onclick="like()"><i class="fas fa-thumbs-up"></i>&nbsp;Like</button>
+      <p>Be the first one to like this!</p>
+    </div>
+    <div class="comment">
+      <textarea name="comment" id="comment" cols="80" rows="5" placeholder="Leave a comment..."></textarea>
+      <button onclick="postComment()">Comment</button>
+    </div>
+
+    <!-- Comments area -->
+    <div class="comment-area">
+      <h3>All Comments</h3>
+
+      <div id="all-comments"></div>
+    </div>
+  </main>
+  <script src="../scripts/common.js"></script>
+    <!-- Place all Javascript for rest of the elements in this file -->
+    <script src="../scripts/index.js"></script>
+
+     <script src="../scripts/post.js"></script>
+  </body>
+</html>
+

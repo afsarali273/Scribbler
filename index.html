@@ -79,10 +79,14 @@
       <div class="modal" id="signin-modal">
         <div class="modal-content">
           <div class="modal-head">
-            <span onclick="hideSignInModal()" id="close" class="close"
-              >&times;</span
-            >
-            <h2 class="modal-title">Welcome Back!</h2>
+            <span>
+              <i
+                onclick="hideSignInModal()"
+                class="fa fa-times"
+                aria-hidden="true"
+              ></i>
+              <h2 class="modal-title">Welcome Back!</h2>
+            </span>
           </div>
           <hr />
           <form>
@@ -90,14 +94,14 @@
             <input
               type="text"
               id="username"
-              placeholder="Enter Username"
+              placeholder="Enter your username"
               required
             />
             <label for="password" class="label-text">Password</label>
             <input
               type="password"
               id="password"
-              placeholder="Enter Password"
+              placeholder="Enter your password"
               required
             />
             <button
@@ -108,14 +112,15 @@
               Sign In
             </button>
           </form>
-
-          <p class="bottom-banner">
-            Not a member?<span
-              onclick="hideSignInModal();showSignUpModal()"
-              class="signup"
-              >Sign Up</span
-            >
-          </p>
+          <div class="container">
+            <p class="bottom-banner">
+              Not a member?<span
+                onclick="hideSignInModal();showSignUpModal()"
+                class="signup"
+                >Sign Up</span
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -125,32 +130,36 @@
       <div class="modal" id="signup-modal">
         <div class="modal-content">
           <div class="modal-head">
-            <span onclick="hideSignUpModal()" id="close" class="close"
-              >&times;</span
-            >
-            <h2 class="modal-title">Get Started</h2>
+            <span>
+              <i
+                onclick="hideSignUpModal()"
+                class="fa fa-times"
+                aria-hidden="true"
+              ></i>
+              <h2 class="modal-title">Get Started</h2>
+            </span>
           </div>
           <hr />
           <form>
-            <label for="fullname" class="label-text">Full name</label>
+            <label for="fullname" class="label-text">Name</label>
             <input
               type="text"
               id="fullname"
-              placeholder="Enter Full Name"
+              placeholder="Enter your name"
               required
             />
             <label for="username" class="label-text">Username</label>
             <input
               type="text"
               id="username"
-              placeholder="Enter Username"
+              placeholder="Enter your username"
               required
             />
             <label for="password" class="label-text">Password</label>
             <input
               type="password"
               id="password"
-              placeholder="Enter Password"
+              placeholder="Enter your password"
               required
             />
             <label for="confirmpassword" class="label-text"
@@ -159,7 +168,7 @@
             <input
               type="password"
               id="confirm_password"
-              placeholder="Confirm Password"
+              placeholder="Re-enter your password"
               required
             />
             <button
@@ -167,7 +176,7 @@
               onclick="signup(firstName,lastName, email, password, mobile)"
               class="signin-btn"
             >
-              Sign up
+              Sign Up
             </button>
           </form>
         </div>

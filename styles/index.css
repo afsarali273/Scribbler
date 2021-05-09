@@ -60,3 +60,7 @@ textarea {
   width: 80%;
   height: 70%;
 }
+
+.fa-times {
+  float: right;
+}

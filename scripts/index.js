@@ -9,5 +9,5 @@ function hideCreatePostModal(){
 }
 
 function navigateToBlogList(){
-  location.href = "html/postlist.html"
+  location.href = "html/postslist.html"
 }
